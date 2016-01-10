@@ -23,6 +23,18 @@ class EloquentCountryRepository implements CountryRepository
         return Country::where('active', 1)->get();
     }
 
+
+    /**
+     * Returns a country by id.
+     *
+     * @param $id
+     * @return mixed
+     */
+    public function find($id)
+    {
+        return Country::where('id', '=', $id)->get();
+    }
+
     /**
      * Return country by country code.
      *
@@ -31,7 +43,7 @@ class EloquentCountryRepository implements CountryRepository
      */
     public function findByCode($code)
     {
-        return Country::where('code', $code)->firstOrFail();
+        return Country::where('code', $code)->limit(1)->get();
     }
 
     /**
@@ -42,7 +54,7 @@ class EloquentCountryRepository implements CountryRepository
      */
     public function findByName($name)
     {
-        return Country::where('name', $name)->firstOrFail();
+        return Country::where('name', $name)->limit(1)->get();
     }
 
     /**
@@ -57,6 +69,7 @@ class EloquentCountryRepository implements CountryRepository
         return Country::where([
             'latitude' => $latitude,
             'longitude' => $longitude
-        ])->firstOrFail();
+        ])->limit(1)->get();
     }
+
 }

@@ -18,6 +18,14 @@ interface CountryRepository
     public function active();
 
     /**
+     * Returns a country by id.
+     *
+     * @param $id
+     * @return mixed
+     */
+    public function find($id);
+
+    /**
      * Return country by country code.
      *
      * @param $code
