@@ -1,7 +1,7 @@
 <?php
 namespace App\PetFinders\Locations\Countries;
 
-class CountryEloquentRepository implements CountryRepository
+class EloquentCountryRepository implements CountryRepository
 {
     /**
      * Return all countries.

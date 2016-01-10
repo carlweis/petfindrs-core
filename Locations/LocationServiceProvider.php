@@ -1,7 +1,7 @@
 <?php
 namespace App\PetFinders\Locations;
 
-use App\PetFinders\Locations\Countries\CountryEloquentRepository;
+use App\PetFinders\Locations\Countries\EloquentCountryRepository;
 use App\PetFinders\Locations\Countries\CountryRepository;
 use Illuminate\Support\ServiceProvider;
 
@@ -15,6 +15,6 @@ class LocationServiceProvider extends ServiceProvider
     public function register()
     {
         // bind countries repository
-        $this->app->bind(CountryRepository::class, CountryEloquentRepository::class);
+        $this->app->bind(CountryRepository::class, EloquentCountryRepository::class);
     }
 }
