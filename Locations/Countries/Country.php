@@ -1,5 +1,5 @@
 <?php
-namespace app\PetFinders\Locations\Countries;
+namespace App\PetFinders\Locations\Countries;
 
 use Illuminate\Database\Eloquent\Model;
 
