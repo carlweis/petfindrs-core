@@ -1,8 +1,8 @@
 <?php
-namespace App\PetFinders\Locations;
+namespace App\PetFindrs\Locations;
 
-use App\PetFinders\Locations\Countries\EloquentCountryRepository;
-use App\PetFinders\Locations\Countries\CountryRepository;
+use App\PetFindrs\Locations\Countries\EloquentCountryRepository;
+use App\PetFindrs\Locations\Countries\CountryRepository;
 use Illuminate\Support\ServiceProvider;
 
 class LocationServiceProvider extends ServiceProvider

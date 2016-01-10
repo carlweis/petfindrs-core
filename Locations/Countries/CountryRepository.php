@@ -1,5 +1,5 @@
 <?php
-namespace App\PetFinders\Locations\Countries;
+namespace App\PetFindrs\Locations\Countries;
 
 interface CountryRepository
 {
